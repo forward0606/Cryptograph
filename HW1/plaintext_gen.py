@@ -1,7 +1,7 @@
 import random
 from math import floor
 
-table = "123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ,.?&%!@#^&()"
+table = "123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ,.?&%!@#^&()     \n\n\n\n\n"
 
 target = 200000000
 n = len(table)
@@ -11,7 +11,8 @@ for i in range(0, target):
 	x = floor(n * random.random())
 	s += table[x]
 
-print(s)
+f = open("plaintext.txt", "w")
+f.write(s)
 
 
 
